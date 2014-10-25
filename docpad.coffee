@@ -8,17 +8,16 @@ docpadConfig = {
       title: "Savyasaachi"
 
       # The production url of our website.
-      url: "http://example.com"
+      url: "http://savyasaachi.in"
 
       # The website description (for SEO).
       description: """
-        When your website appears in search results in say Google, the text here
-        will be shown underneath your website's title.
+        The annual magazine of Mysore Medical College & Research Institute
         """
 
       # The website keywords (for SEO) separated by commas.
       keywords: """
-        place, your, website, keywords, here
+        mmcri, magazine, mysore medical college
         """
 
       # The cascading stylesheets for the site.
@@ -31,6 +30,10 @@ docpadConfig = {
         "main.js"
       ]
 
+  plugins:
+    ghpages:
+      deployRemote:"origin"
+      deployBranch:"gh-pages"
 
 
 }
