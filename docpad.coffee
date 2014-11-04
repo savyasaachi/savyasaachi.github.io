@@ -35,6 +35,10 @@ docpadConfig = {
       deployRemote:"origin"
       deployBranch:"master"
 
+  collections: {
+    english: ->
+      @getCollection("html").findAllLive({lang: "en"})
+  }
 
 }
 

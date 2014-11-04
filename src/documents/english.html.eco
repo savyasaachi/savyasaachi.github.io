@@ -1,0 +1,27 @@
+---
+layout: "pureblog"
+title: "Savyasaachi"
+---
+
+            <div class="posts">
+                <h1 class="content-subhead">English Section</h1>
+
+
+<% for page in @getCollection("english").toJSON(): %>
+	 <section class="post">
+                    <header class="post-header">
+                        
+                        <h2 class="post-title"><a href="<%= page.url %>"><%= page.title %></a></h2>
+
+                        <p class="post-meta">
+                            By <a class="post-author" href="#"><%= page.author %></a> 
+                        </p>
+                    </header>
+
+                    <div class="post-description">
+                        <%= page.desc %>
+                    </div>
+    </section>
+<% end %>
+
+</div>
