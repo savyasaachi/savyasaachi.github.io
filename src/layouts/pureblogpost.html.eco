@@ -83,6 +83,22 @@
 
 
 
+<% if @document.lang is "en": %>
+<% for document,documentIndex in @getCollection("english").toJSON(): %>
+<% if @document.id is document.id: %>
+<% if documentIndex >= 1: %>
+<a href="<%= @getCollection("english").toJSON()[documentIndex-1].url %>" class="previous"><img src="/images/lft_arrow.png" alt="" />Previous</a>
+<% end %>
+<% if documentIndex < @getCollection("english").length - 1: %>
+<a href="<%= @getCollection("english").toJSON()[documentIndex+1].url %>" class="next"><img src="/images/rt_arrow.png" alt="" />Next</a>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+
+
+
+
             <div class="footer">
                 <div class="pure-menu pure-menu-horizontal pure-menu-open">
                     <ul>

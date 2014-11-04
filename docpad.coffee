@@ -38,6 +38,10 @@ docpadConfig = {
   collections: {
     english: ->
       @getCollection("html").findAllLive({lang: "en"})
+    kannada: ->
+      @getCollection("html").findAllLive({lang: "kn"})
+    regional: ->
+      @getCollection("html").findAllLive({lang: "reg"})
   }
 
 }

@@ -1,13 +1,13 @@
 ---
 layout: "pureblog"
-title: "English Section"
+title: "Regional Section"
 ---
 
             <div class="posts">
-                <h1 class="content-subhead">English Section</h1>
+                <h1 class="content-subhead">Regional Section</h1>
 
 
-<% for page in @getCollection("english").toJSON(): %>
+<% for page in @getCollection("regional").toJSON(): %>
 	 <section class="post">
                     <header class="post-header">
                         
