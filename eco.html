@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Rendered with Eco -->
+  <meta charset="utf-8" />
+
+  <!-- Site Properities -->
+  <title>Savyasaachi</title>
+  <meta name="description" content="The annual magazine of Mysore Medical College &amp; Research Institute" />
+  <meta name="keywords" content="mmcri,magazine,mysore medical college" />
+
+  <!-- DocPad Meta -->
+  <meta name="generator" content="DocPad v6.56.0" />
+
+  <!-- DocPad Styles + Our Own -->
+  <style >html.wait {
+	cursor: wait !important;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}</style><link  rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header>
+    <h1>Eco Example</h1>
+  </header>
+  <article>
+    <p>This example of Savyasaachi makes use of the <a href="https://github.com/docpad/docpad-plugin-eco/">Eco DocPad Plugin</a>.</p>
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+</ul>
+  </article>
+
+  <!-- DocPad Scripts + Our Own -->
+  <script >(function(){
+	/* Did we just livereload? */
+var log = !!(localStorage && console && console.log && true);
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReload completed at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var primus = new Primus('/docpad-livereload');
+	primus.on('data', function(data){
+		if ( data && data.message ) {
+			if ( data.message === 'generateBefore' ) {
+				if ( log ) {
+					console.log('LiveReload started at', new Date());
+				}
+				if ( typeof document.getElementsByTagName !== 'undefined' ) {
+	document.getElementsByTagName('html')[0].className += ' wait';
+}
+			}
+			else if ( data.message === 'generateAfter' ) {
+				if ( log ) {
+					localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+				}
+				document.location.reload();
+			}
+		}
+	});
+};
+	/* Inject socket into our page */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = 'async';
+	t.src = '/primus/primus.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t, s);
+};
+	if ( typeof Primus !== 'undefined' ) {
+		listen();
+	} else {
+		inject();
+	}
+})();</script><script defer="defer"  src="main.js"></script>
+</body>
+</html>
